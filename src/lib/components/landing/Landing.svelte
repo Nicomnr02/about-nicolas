@@ -4,7 +4,7 @@
 </script>
 
 <div
-  class="flex flex-row justify-center h-screen bg-[url(./lib/assets/landing-bg.svg)]"
+  class="flex flex-row justify-center h-screen  w-full"
 >
   <div class="flex flex-col">
     <Cardline />

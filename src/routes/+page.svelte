@@ -1,5 +1,9 @@
 <script>
+  import Project from "$lib/components/project/Project.svelte";
   import Landing from "$lib/components/landing/Landing.svelte";
 </script>
 
-<Landing></Landing>
+<section class="flex flex-col bg-[url(./lib/assets/landing-bg.svg)]">
+  <Landing></Landing>
+  <Project></Project>
+</section>
