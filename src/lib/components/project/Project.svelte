@@ -4,12 +4,13 @@
   import { projects } from "$lib/constants/project";
 </script>
 
-<div class="flex flex-col gap-25 items-center h-screen w-full text-white">
+<div class="flex flex-col gap-10 items-center h-screen w-full text-white">
   <div class="flex flex-col justify-center px-10">
     <p class="mt-15 text-2xl font-bold tracking-tight">Projects</p>
     <p class="text-sm mt-5 leading-relaxed">
-      Here are my awesome Projects that already launched. Those projects covered
-      over 2+ companies business and 1 volunteered program.
+      Here are my projects that already launched and used by 800+ active users.
+      Those projects are covered over 2 companies business and 3 volunteered
+      program.
     </p>
   </div>
   <div class="flex flex-col items-center justify-center w-full">
@@ -17,21 +18,27 @@
       opts={{
         align: "start",
         loop: true,
+        skipSnaps: false,
       }}
       orientation="horizontal"
-      class="w-full max-w-xs h-[280px]"
+      class="w-full h-[280px] "
     >
-      <Carousel.Content class="mt-1 h-[300px]">
+      <Carousel.Content class="mt-1 h-[300px] ">
         {#each projects as project, i (i)}
-          <Carousel.Item class="pt-1 ">
-            <div class="p-1">
+          <Carousel.Item class="pt-1">
+            <div class="p-1 flex justify-center">
               <Card.Root
-                class="h-[250px] bg-white shadow-lg rounded-3xl p-10 hover:bg-cyan-950
-               transition duration-300"
+                class="flex justify-center items-center w-80 h-[250px] inset-5 hover:bg-[radial-gradient(circle_at_center,rgba(0,102,255,0.5),transparent_80%)] backdrop-blur-0 border border-white/30 rounded-2xl transition duration-500 hover:backdrop-blur-md hover:bg-transparent hover:-translate-y-1"
               >
-                <Card.Content class="flex items-center justify-center p-3 ">
-                  <div class="flex flex-col">
-                    <div>{@html project.svg}</div>
+                <Card.Content
+                  class="flex flex-col items-center justify-center p-3 "
+                >
+                  <div class="flex flex-col justify-center items-center">
+                    {#if project.image}
+                      <img src={project.image} alt="" class="w-1/2" />
+                    {:else}
+                      {@html project.svg}
+                    {/if}
                   </div>
                 </Card.Content>
               </Card.Root>
@@ -42,6 +49,9 @@
       <!-- <Carousel.Previous />
       <Carousel.Next /> -->
     </Carousel.Root>
-    <p class="text-sm mt-5 leading-relaxed">Scroll ke kanan ➜</p>
+    <p class="text-sm mt-5 leading-relaxed text-white flex items-center gap-1">
+      Scroll to the right
+      <span class="inline-block text-blue-500 animate-pulse">➜</span>
+    </p>
   </div>
 </div>
