@@ -8,7 +8,7 @@
   <div class="flex flex-col justify-center px-10">
     <p class="mt-15 text-2xl font-bold tracking-tight">Projects</p>
     <p class="text-sm mt-5 leading-relaxed">
-      Here are my projects that already launched and used by 800+ active users.
+      Here are my projects that already launched and used by 200+ active users.
       Those projects are covered over 2 companies business and 3 volunteered
       program.
     </p>

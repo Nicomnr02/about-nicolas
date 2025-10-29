@@ -32,6 +32,7 @@
 		"vite": "^7.1.7"
 	},
 	"dependencies": {
-		"embla-carousel-react": "^8.6.0"
+		"embla-carousel-react": "^8.6.0",
+		"svelte-vertical-timeline": "^2.0.0"
 	}
 }

@@ -3,7 +3,7 @@
   import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 </script>
 
-<div class="mt-10 flex flex-col h-1/4">
+<div class="mt-10 flex flex-col h-1/4 text-white">
   <div class="flex justify-center items-center mt-10 gap-4 h-1/6 w-full">
     <div class="flex justify-base items-center">
       <Avatar class="size-20 sm:size-25 md:size-25 lg:size-25">
