@@ -4,7 +4,10 @@
   import { projects } from "$lib/constants/project";
 </script>
 
-<div class="mt-5 flex flex-col gap-10 items-center h-screen lg:h-1/2 w-full">
+<section
+  class="mt-5 flex flex-col gap-10 items-center h-screen lg:h-1/2 w-full"
+  id="project"
+>
   <div class="flex flex-col justify-center px-10">
     <p class="text-2xl font-bold tracking-tight">Projects</p>
     <p class="text-sm mt-5 leading-relaxed">
@@ -54,4 +57,4 @@
       <span class="inline-block text-blue-500 animate-pulse">➜</span>
     </p>
   </div>
-</div>
+</section>

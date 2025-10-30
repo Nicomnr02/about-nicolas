@@ -12,7 +12,10 @@
   import { experiences } from "$lib/constants/experience";
 </script>
 
-<div class="mt-5 lg:mt-15 h-screen lg:h-fit flex flex-col gap-10 items-center">
+<section
+  class="mt-5 lg:mt-15 h-screen lg:h-fit flex flex-col gap-10 items-center w-full"
+  id="experience"
+>
   <p class="text-2xl font-bold tracking-tight">Experiences</p>
   <Timeline position="left" style={"border-radius: 2%;"}>
     {#each experiences as experience, i}
@@ -52,4 +55,4 @@
       </TimelineItem>
     {/each}
   </Timeline>
-</div>
+</section>

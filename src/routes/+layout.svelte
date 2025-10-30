@@ -7,14 +7,11 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<!-- <style>
+		* {
+			outline: 1px dashed rgba(0, 0, 0, 0.25);
+		}
+	</style> -->
 </svelte:head>
 
 {@render children?.()}
-
-<style>
-	:global(body) {
-		/* color: #f1f1f1;
-		background-color: #121212;
-		font-family: system-ui, sans-serif; */
-	}
-</style>
