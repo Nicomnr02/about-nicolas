@@ -2,6 +2,21 @@
   import * as Card from "$lib/components/ui/card/index.js";
   import * as Carousel from "$lib/components/ui/carousel/index.js";
   import { projects } from "$lib/constants/project";
+  import { fly } from "svelte/transition";
+  import { type CarouselAPI } from "$lib/components/ui/carousel/context.js";
+
+  let api = $state<CarouselAPI>();
+  let hover = $state(false);
+  let current = $state(0);
+
+  $effect(() => {
+    if (api) {
+      api.on("select", () => {
+        current = api?.selectedScrollSnap() || 0;
+        console.log("Active slide:", current);
+      });
+    }
+  });
 </script>
 
 <section
@@ -11,9 +26,9 @@
   <div class="flex flex-col justify-center px-10">
     <p class="text-2xl font-bold tracking-tight">Projects</p>
     <p class="text-sm mt-5 leading-relaxed">
-      Here are my projects that already launched and used by 200+ active users.
-      Those projects are covered over 2 companies business and 3 volunteered
-      program.
+      Here are some of my released and ongoing projects supporting companies and
+      volunteer initiatives, with each project serving hundreds to thousands of
+      active users.
     </p>
   </div>
   <div class="flex flex-col items-center justify-center w-4/5">
@@ -24,12 +39,18 @@
         skipSnaps: false,
       }}
       orientation="horizontal"
-      class="w-full h-[280px] "
+      class="w-full h-[280px]"
+      setApi={(emblaApi) => (api = emblaApi)}
     >
       <Carousel.Content class="mt-1 h-[300px] ">
         {#each projects as project, i (i)}
           <Carousel.Item class="pt-1">
-            <div class="p-1 flex justify-center">
+            <div
+              class="p-1 flex justify-center"
+              role="presentation"
+              onmouseenter={() => (hover = true)}
+              onmouseleave={() => (hover = false)}
+            >
               <Card.Root
                 class="flex justify-center items-center w-80 h-[250px]  inset-5 hover:bg-[radial-gradient(circle_at_center,rgba(0,102,255,0.5),transparent_80%)] backdrop-blur-0 border border-black/60 rounded-2xl transition duration-500 hover:backdrop-blur-md hover:bg-black hover:-translate-y-1"
               >
@@ -49,6 +70,7 @@
           </Carousel.Item>
         {/each}
       </Carousel.Content>
+
       <!-- <Carousel.Previous />
       <Carousel.Next /> -->
     </Carousel.Root>
@@ -58,3 +80,19 @@
     </p>
   </div>
 </section>
+
+<!-- Toast -->
+{#if hover}
+  <button
+    in:fly={{ y: 0, duration: 600 }}
+    out:fly={{ y: -5, duration: 50 }}
+    class="fixed bottom-1/6 right-15 z-50 bg-black text-white p-2 rounded-full hover:bg-gray-800 transition"
+    aria-label="Toggle s"
+  >
+    <div class="flex flex-row gap-5 justify-between">
+      {#each projects[current || 0].techstackIcons as icon}
+        <img src={icon} alt="alt" class="w-10 h-5" />
+      {/each}
+    </div>
+  </button>
+{/if}
