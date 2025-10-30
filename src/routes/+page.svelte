@@ -13,4 +13,5 @@
   <Project></Project>
   <Experience></Experience>
   <Skill></Skill>
+  © 2025 Nicolas Manurung
 </section>

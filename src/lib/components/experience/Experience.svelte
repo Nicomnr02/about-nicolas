@@ -13,7 +13,7 @@
 </script>
 
 <section
-  class="mt-5 lg:mt-15 h-screen lg:h-fit flex flex-col gap-10 items-center w-full"
+  class="mt-15 h-screen lg:h-fit flex flex-col gap-10 items-center w-full"
   id="experience"
 >
   <p class="text-2xl font-bold tracking-tight">Experiences</p>

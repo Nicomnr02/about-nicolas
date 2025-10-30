@@ -4,9 +4,9 @@
 </script>
 
 <div class="mt-10 flex flex-col h-1/4">
-  <div class="flex gap-5 lg:gap-10 justify-center mt-10 h-2/3 w-full">
-    <div class="flex justify-base items-center">
-      <Avatar class="size-20 lg:size-35">
+  <div class="flex gap-3 lg:gap-10 justify-center mt-10 h-2/3 w-full">
+    <div class="flex justify-center items-center">
+      <Avatar class="size-20 lg:size-25 mb-7">
         <AvatarImage src={person.avatar} />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
