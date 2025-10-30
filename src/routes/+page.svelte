@@ -4,8 +4,10 @@
   import Landing from "$lib/components/landing/Landing.svelte";
 </script>
 
-<section class="flex flex-col bg-[url(./lib/assets/landing-bg.svg)]">
-  <Landing></Landing>
-  <Project></Project>
-  <Experience></Experience>
-</section>
+<div class="">
+  <section class="flex gap-10 flex-col items-center lg:w-1/3 mx-auto">
+    <Landing></Landing>
+    <Project></Project>
+    <Experience></Experience>
+  </section>
+</div>

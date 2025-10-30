@@ -12,7 +12,7 @@
   import { experiences } from "$lib/constants/experience";
 </script>
 
-<div class="h-fit flex flex-col gap-10 items-center text-white">
+<div class="mt-5 lg:mt-15 h-screen lg:h-fit flex flex-col gap-10 items-center">
   <p class="text-2xl font-bold tracking-tight">Experiences</p>
   <Timeline position="left" style={"border-radius: 2%;"}>
     {#each experiences as experience, i}
@@ -23,10 +23,10 @@
               <span
                 class="bg-linear-to-r from-cyan-500/30 to-blue-600/30
                border border-cyan-400/30
-               px-3 py-1 rounded-full text-xs text-gray-200
+               px-3 py-1 rounded-bl-sm text-xs
                backdrop-blur-sm shadow-sm shadow-cyan-500/10
                transition-all duration-300
-               hover:scale-105 hover:shadow-cyan-400/30 hover:border-cyan-400/60 hover:text-white hover:from-cyan-500/60 hover:to-blue-600/60"
+               hover:scale-105 hover:shadow-cyan-400/30 hover:border-cyan-400/60 hover: hover:from-cyan-500/60 hover:to-blue-600/60"
               >
                 {system}
               </span>
@@ -34,7 +34,7 @@
           </div>
         </TimelineOppositeContent>
         <TimelineSeparator>
-          <TimelineDot style={"background-color: #FFF;"} />
+          <TimelineDot style={"background-color: //#region ;"} />
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>

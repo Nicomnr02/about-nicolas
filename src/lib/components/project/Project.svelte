@@ -4,16 +4,16 @@
   import { projects } from "$lib/constants/project";
 </script>
 
-<div class="flex flex-col gap-10 items-center h-screen w-full text-white">
+<div class="mt-5 flex flex-col gap-10 items-center h-screen lg:h-1/2 w-full">
   <div class="flex flex-col justify-center px-10">
-    <p class="mt-15 text-2xl font-bold tracking-tight">Projects</p>
+    <p class="text-2xl font-bold tracking-tight">Projects</p>
     <p class="text-sm mt-5 leading-relaxed">
       Here are my projects that already launched and used by 200+ active users.
       Those projects are covered over 2 companies business and 3 volunteered
       program.
     </p>
   </div>
-  <div class="flex flex-col items-center justify-center w-full">
+  <div class="flex flex-col items-center justify-center w-4/5">
     <Carousel.Root
       opts={{
         align: "start",
@@ -28,7 +28,7 @@
           <Carousel.Item class="pt-1">
             <div class="p-1 flex justify-center">
               <Card.Root
-                class="flex justify-center items-center w-80 h-[250px] inset-5 hover:bg-[radial-gradient(circle_at_center,rgba(0,102,255,0.5),transparent_80%)] backdrop-blur-0 border border-white/30 rounded-2xl transition duration-500 hover:backdrop-blur-md hover:bg-transparent hover:-translate-y-1"
+                class="flex justify-center items-center w-80 h-[250px]  inset-5 hover:bg-[radial-gradient(circle_at_center,rgba(0,102,255,0.5),transparent_80%)] backdrop-blur-0 border border-black/60 rounded-2xl transition duration-500 hover:backdrop-blur-md hover:bg-black hover:-translate-y-1"
               >
                 <Card.Content
                   class="flex flex-col items-center justify-center p-3 "
@@ -49,7 +49,7 @@
       <!-- <Carousel.Previous />
       <Carousel.Next /> -->
     </Carousel.Root>
-    <p class="text-sm mt-5 leading-relaxed text-white flex items-center gap-1">
+    <p class="text-sm mt-5 leading-relaxed flex items-center gap-1">
       Scroll to the right
       <span class="inline-block text-blue-500 animate-pulse">➜</span>
     </p>

@@ -10,3 +10,11 @@
 </svelte:head>
 
 {@render children?.()}
+
+<style>
+	:global(body) {
+		/* color: #f1f1f1;
+		background-color: #121212;
+		font-family: system-ui, sans-serif; */
+	}
+</style>
