@@ -1,43 +1,30 @@
 export const experiences = [
   {
-    company: "Bank Rakyat Indonesia (BRI)",
-    time: "08 September 2025 - Present",
-    title: "Backend Engineer",
-    systems: [
-      "BRISPOT system"
-    ]
+    timeline: "2025 - PRESENT",
+    title: "Backend Engineer at Bank Rakyat Indonesia (BRI)",
+    src: "https://brispot.bri.co.id/",
+    description: "Maintain a 'surrounding' system in credit card team by refactoring and enhancing query of critical request.",
+    stack: ["node.js", "express.js", "mssql", "redis", "mysql"]
   },
-
   {
-    company: "PT. Synapsis Sinergi Digital",
-    time: "20 May 2024 - 27 August 2025",
-    title: "Backend Engineer",
-    systems: [
-      "Business Travel Request (BTR)",
-      "Time Off Service",
-      "Health, Safety, and Environment (HSE) notification service"
-    ]
+    timeline: "2024 - 2025",
+    title: "Backend Engineer at PT. Synapsis Sinergi Digital",
+    src: "https://synapsis.id/",
+    description: "Developed a critical API for Business Travel Request. Work closely with cross-functional teams including developers, QA, designers, and PM.",
+    stack: ["microservices", "go", "fiber", "postgres", "questDB", "mongo", "kafka", "grpc", "websocket", "agile development"]
   },
-
   {
-    company: "PT. Dimy Teknologi Indonesia",
-    time: "20 December 2023 - 20 May 2024",
-    title: "Backend Engineer",
-    systems: [
-      "Disbursement & Payouts service",
-      "Savings service"
-    ]
+    timeline: "2023 - 2024",
+    title: "Backend Engineer at PT. Dimy Teknologi Indonesia",
+    src: "https://dimyteknologi.com/",
+    description: "Patched mistaken balancing process of credit-union system, enhancing query to improve performance.",
+    stack: ["go", "echo", "postgres", "mysql", "agile development"]
   },
-
   {
-    company: "PT. Synapsis Sinergi Digital",
-    time: "18 May 2023 - 18 August 2023",
-    title: "Backend Engineer",
-    systems: [
-      "Roster Scheduling service",
-      "User Management system",
-      "Role Permission service",
-      "System Settings module"
-    ]
+    timeline: "MAY - AUGUST 2023",
+    title: "Backend Engineer intern at PT. Synapsis Sinergi Digital",
+    src: "https://synapsis.id/",
+    description: "Developed a module of subsystem in a superapp. Explored and utilized several tech stack to perform the requirement.",
+    stack: ["microservices", "go", "fiber", "postgres", "kafka", "grpc", "agile development"]
   },
 ];

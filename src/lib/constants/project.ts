@@ -7,7 +7,6 @@ export const projects = [
   {
     title: "Employee Self Service",
     description: "ESS (Employee Self Service) is part of PT Madhani Talatah Nusantara superapp (Madhani ONE) that enable the critical process of business including payroll, business travel request, medical claims, and more.",
-    // description: "Build and maintain a critical API for Business Travel Request. Work closely with cross-functional teams including developers, QA, designers, and PM",
     image: ess,
     src: "https://madhani.one/",
     stack: ["go", "fiber", "grpc", "kafka", "postgres", "s3"],
