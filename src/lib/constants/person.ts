@@ -1,9 +1,10 @@
+import nico from "../assets/person/nico.jpg"
+
 export const person = {
   name: "Nicolas Manurung",
   title: "Software Engineer",
   description: "Backend Engineer at BRI",
-  avatar:
-    "https://lh3.googleusercontent.com/a/ACg8ocJF7vUi3RM3ZAs5fTbZDcmBmp-Eg1p0axFev_nSgCqRPLRHs8M=s288-c-no",
+  avatar: nico,
   about_me: "Hi, this is Nico, I help people to design and implement transparent and efficient business systems with work smarter and achieve sustainable growth. With 2 years experience as Backend Engineer, i've built several diverse business model system, for instance Employee Self-Service, Credit Union Platform, Smart-scheduler and etc, besides, did refactoring, enhancement, and perform many stuff to make the robust and resilience product. I'm also a good problem-communicator with a effective solution (either its by my own or my great team xixi). Get me closely to manurungnico02@gmail.com.",
   social_medias: [
     {

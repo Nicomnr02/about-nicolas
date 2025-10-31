@@ -23,7 +23,7 @@ export const projects = [
     description: "A scheduler, notifier to upcoming sabbath's participants (bulk input).",
     image: jia,
     src: "",
-    stack: ["go", "gin", "postgres", "react", "html", "css"],
+    stack: ["go", "gin", "postgres", "reactJS", "nextJS"],
   },
   {
     title: "UNAI Reminder - Build a Student Schedule Reminder",
@@ -37,7 +37,7 @@ export const projects = [
     description: "My portfolio site.",
     image: null,
     src: "",
-    stack: ["javascript", "svelte"]
+    stack: ["typescript", "svelte"]
   },
 ]
 

@@ -4,7 +4,7 @@
 </script>
 
 <div class="mt-10 flex flex-col h-2/3">
-  <div class="flex gap-3 ml-5 justify-start items-start mt-10 overflow-hidden">
+  <div class="flex gap-3 ml-5 justify-center lg:justify-start items-start mt-10 overflow-hidden">
     <div class="flex justify-start lg:justify-center lg:items-center">
       <Avatar class="size-20 lg:size-25 mb-7">
         <AvatarImage src={person.avatar} />
