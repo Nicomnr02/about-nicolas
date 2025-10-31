@@ -8,6 +8,6 @@
     <Cardline />
     <AboutMe />
     <br />
-    <hr class="border-t-2 border-black my-6 w-3/5 mx-auto" />
+    <!-- <hr class="border-t-2 border-black my-6 w-3/5 mx-auto" /> -->
   </div>
 </section>

@@ -1,98 +1,47 @@
 <script lang="ts">
-  import * as Card from "$lib/components/ui/card/index.js";
-  import * as Carousel from "$lib/components/ui/carousel/index.js";
   import { projects } from "$lib/constants/project";
-  import { fly } from "svelte/transition";
-  import { type CarouselAPI } from "$lib/components/ui/carousel/context.js";
-
-  let api = $state<CarouselAPI>();
-  let hover = $state(false);
-  let current = $state(0);
-
-  $effect(() => {
-    if (api) {
-      api.on("select", () => {
-        current = api?.selectedScrollSnap() || 0;
-        console.log("Active slide:", current);
-      });
-    }
-  });
 </script>
 
-<section
-  class="mt-5 flex flex-col gap-10 items-center lg:h-1/2 w-full"
-  id="project"
->
-  <div class="flex flex-col justify-center px-10">
-    <p class="text-2xl font-bold tracking-tight">Projects</p>
-    <p class="text-sm mt-5 leading-relaxed">
-      Here are some of my released and ongoing projects supporting companies and
-      volunteer initiatives, with each project serving hundreds to thousands of
-      active users.
-    </p>
-  </div>
-  <div class="flex flex-col items-center justify-center w-4/5">
-    <Carousel.Root
-      opts={{
-        align: "start",
-        loop: true,
-        skipSnaps: false,
-      }}
-      orientation="horizontal"
-      class="w-full h-[280px]"
-      setApi={(emblaApi) => (api = emblaApi)}
-    >
-      <Carousel.Content class="mt-1 h-[300px] ">
-        {#each projects as project, i (i)}
-          <Carousel.Item class="pt-1">
+<div class="px-10 flex flex-col gap-5 w-full h-fit">
+  <p class="text-1xl font-semibold tracking-tight">PROJECTS</p>
+  <div class="flex flex-col gap-15">
+    {#each projects as project}
+      <div class="flex flex-col gap-5">
+        <a
+          href={project.src}
+          class="flex items-center gap-1 font-bold hover:text-blue-400 transition-colors duration-300 group"
+        >
+          {project.title}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-3 h-3 inline-block transition-transform duration-300 transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 19l14-14M5 5h14v14"
+            />
+          </svg>
+        </a>
+
+        <p class="text-sm leading-relaxed">{project.description}</p>
+        <div class="flex gap-3 flex-wrap">
+          {#each project.stack as stack}
             <div
-              class="p-1 flex justify-center"
-              role="presentation"
-              onmouseenter={() => (hover = true)}
-              onmouseleave={() => (hover = false)}
+              class="flex items-center p-3 h-2 rounded-3xl text-sm text-white bg-gray-900"
             >
-              <Card.Root
-                class="flex justify-center items-center w-80 h-[250px]  inset-5 hover:bg-[radial-gradient(circle_at_center,rgba(0,102,255,0.5),transparent_80%)] backdrop-blur-0 border border-black/60 rounded-2xl transition duration-500 hover:backdrop-blur-md hover:bg-black hover:-translate-y-1"
-              >
-                <Card.Content
-                  class="flex flex-col items-center justify-center p-3 "
-                >
-                  <div class="flex flex-col justify-center items-center">
-                    {#if project.image}
-                      <img src={project.image} alt="" class="w-1/2" />
-                    {:else}
-                      {@html project.svg}
-                    {/if}
-                  </div>
-                </Card.Content>
-              </Card.Root>
+              {stack}
             </div>
-          </Carousel.Item>
-        {/each}
-      </Carousel.Content>
-
-      <!-- <Carousel.Previous />
-      <Carousel.Next /> -->
-    </Carousel.Root>
-    <p class="text-sm mt-5 leading-relaxed flex items-center gap-1">
-      Scroll to the right
-      <span class="inline-block text-blue-500 animate-pulse">➜</span>
-    </p>
+          {/each}
+        </div>
+        {#if project.image}
+          <img src={project.image} alt="" class="w-1/2" />
+        {/if}
+      </div>
+    {/each}
   </div>
-</section>
-
-<!-- Toast -->
-{#if hover}
-  <button
-    in:fly={{ y: 0, duration: 600 }}
-    out:fly={{ y: -5, duration: 50 }}
-    class="fixed bottom-1/6 right-15 z-50 bg-black text-white p-2 rounded-full hover:bg-gray-800 transition"
-    aria-label="Toggle s"
-  >
-    <div class="flex flex-row gap-5 justify-between">
-      {#each projects[current || 0].techstackIcons as icon}
-        <img src={icon} alt="alt" class="w-10 h-5" />
-      {/each}
-    </div>
-  </button>
-{/if}
+</div>

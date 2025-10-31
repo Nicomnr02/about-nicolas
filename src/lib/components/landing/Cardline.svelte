@@ -3,9 +3,9 @@
   import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 </script>
 
-<div class="mt-10 flex flex-col h-1/4">
-  <div class="flex gap-3 lg:gap-10 justify-center mt-10 h-2/3 w-full">
-    <div class="flex justify-center items-center">
+<div class="mt-10 flex flex-col h-2/3">
+  <div class="flex gap-3 ml-5 justify-start items-start mt-10 overflow-hidden">
+    <div class="flex justify-start lg:justify-center lg:items-center">
       <Avatar class="size-20 lg:size-25 mb-7">
         <AvatarImage src={person.avatar} />
         <AvatarFallback>CN</AvatarFallback>
@@ -18,7 +18,7 @@
       </h3>
       <p class="">{person.title}</p>
       <p class="">{person.description}</p>
-      <div class="mt-5 ml-auto flex gap-2 items-end">
+      <div class="mt-5 flex gap-2 items-end">
         {#each person.social_medias as { ref, svg }}
           <a
             rel="noopener noreferrer"
@@ -26,7 +26,7 @@
             target="_blank"
             style="--size:{500}px"
           >
-            <div class="w-10 h-10 bg-black flex items-center rounded-full p-2">
+            <div class="w-8 h-8 bg-black flex items-center rounded-full p-2">
               {@html svg}
             </div>
           </a>
