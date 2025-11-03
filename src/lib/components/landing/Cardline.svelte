@@ -4,7 +4,9 @@
 </script>
 
 <div class="mt-10 flex flex-col h-2/3">
-  <div class="flex gap-3 ml-5 justify-center lg:justify-start items-start mt-10 overflow-hidden">
+  <div
+    class="flex gap-3 ml-5 justify-center lg:justify-start items-start mt-10 overflow-hidden"
+  >
     <div class="flex justify-start lg:justify-center lg:items-center">
       <Avatar class="size-20 lg:size-25 mb-7">
         <AvatarImage src={person.avatar} />
@@ -19,7 +21,7 @@
       <p class="">{person.title}</p>
       <p class="">{person.description}</p>
       <div class="mt-5 flex gap-2 items-end">
-        {#each person.social_medias as { ref, svg }}
+        {#each person.refs as { ref, svg }}
           <a
             rel="noopener noreferrer"
             href={ref}

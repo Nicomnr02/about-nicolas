@@ -1,4 +1,5 @@
 import nico from "../assets/person/nico.jpg"
+import cv from "../assets/person/cv_nicolas_july_2025.pdf"
 
 export const person = {
   name: "Nicolas Manurung",
@@ -6,7 +7,7 @@ export const person = {
   description: "Backend Engineer at BRI",
   avatar: nico,
   about_me: "Hi, this is Nico, I help people to design and implement efficient business systems. With 2 years experience as Backend Engineer, i've built several diverse business model system, for instance Employee Self-Service, Credit Union Platform, Smart-scheduler and etc, besides, i do refactoring, enhancement, and perform many stuff to make the robust and resilience product. I'm also a good problem-communicator (either its by my own or my great team xixi).",
-  social_medias: [
+  refs: [
     {
       ref: "https://github.com/nicomnr02",
       svg: `<svg width="30" height = "30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
@@ -25,6 +26,14 @@ export const person = {
       ref: "mailto:manurungnico02@gmail.com",
       svg: `<svg width="134" height="102" viewBox="0 0 134 102" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M111.5 3.8L103 10.1L66.7 37.4L30.3 10.1L21.8 3.7C12.8 -3 0 3.4 0 14.7V26.8V92C0 97 4.1 101.1 9.1 101.1H30.3V49.5L66.7 76.8L103 49.5V101H124.2C129.2 101 133.3 96.9 133.3 91.9V26.8V14.7C133.3 3.4 120.5 -3 111.5 3.8Z" fill="white"/>
+            </svg>`
+    },
+    {
+      ref: cv,
+      svg: `<svg width="134" height="102" viewBox="0 0 24 24" role="img" aria-label="CV icon" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="22" height="22" rx="6" fill="currentColor" opacity="0.08" stroke="currentColor" stroke-width="2"/>
+            <text x="12" y="16" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
+                  font-size="12" font-weight="700" fill="white">CV</text>
             </svg>`
     },
   ],
