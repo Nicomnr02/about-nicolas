@@ -13,5 +13,6 @@
   <Project></Project>
   <Experience></Experience>
   <Skill></Skill>
-  © 2025 Nicolas Manurung
+
+  <p class="text-sm leading-relaxed">© 2025 Nicolas Manurung</p>
 </section>
