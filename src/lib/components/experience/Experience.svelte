@@ -19,7 +19,7 @@
         <div class="flex flex-wrap gap-2">
           {#each exp.stack as stack}
             <div
-              class="flex items-center p-3 h-2 rounded-3xl text-sm text-white bg-gray-900"
+              class="flex items-center p-3 h-2 rounded-3xl text-sm text-white bg-gray-900 hover:scale-105"
             >
               {stack}
             </div>

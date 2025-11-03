@@ -20,24 +20,24 @@ export const projects = [
   },
   {
     title: "JIA - Jembara Integration App",
-    description: "A scheduler, notifier to upcoming sabbath's participants (bulk input).",
+    description: "Saving bulk ministry datas (participants ministry) and notify them regulary by dynamic interval config. Cut the weekly manual-reminding by SS Staff of GMAHK Jelambar.",
     image: jia,
     src: "",
     stack: ["go", "gin", "postgres", "reactJS", "nextJS"],
   },
   {
     title: "UNAI Reminder - Build a Student Schedule Reminder",
-    description: "Mobile application that reminds student of upcoming starting class.",
+    description: "Mobile application that reminds student of upcoming starting class. Equipped with background and foreground notif.",
     image: unai,
     src: "https://github.com/Nicomnr02/unai_reminder",
-    stack: ["dart", "flutter", "s3"]
+    stack: ["dart", "flutter", "getX"]
   },
   {
-    title: "nicolasrajaoloanmanurung",
+    title: "nicomnr.site",
     description: "My portfolio site.",
     image: null,
     src: "",
-    stack: ["typescript", "svelte"]
+    stack: ["typescript", "svelte", "svelteKit"]
   },
 ]
 

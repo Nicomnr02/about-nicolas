@@ -6,7 +6,7 @@ export const person = {
   title: "Software Engineer",
   description: "Backend Engineer at BRI",
   avatar: nico,
-  about_me: "Hi, this is Nico, I help people to design and implement efficient business systems. With 2 years experience as Backend Engineer, i've built several diverse business model system, for instance Employee Self-Service, Credit Union Platform, Smart-scheduler and etc, besides, i do refactoring, enhancement, and perform many stuff to make the robust and resilience product. I'm also a good problem-communicator (either its by my own or my great team xixi).",
+  about_me: "Hi, this is Nico, I help people to design and implement efficient business systems. With 2 years experience as Backend Engineer, i've built several diverse business model system, for instance Employee Self-Service, Credit Union Platform, Smart-scheduler and etc, besides, i do refactoring, enhancement, and perform many stuff to make the robust and resilience product.",
   refs: [
     {
       ref: "https://github.com/nicomnr02",
