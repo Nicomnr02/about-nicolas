@@ -30,7 +30,7 @@
           <button onclick={() => (preview = project.image)}>
             <img
               src={project.image}
-              alt=""
+              alt="nicolas manurung"
               class="w-1/2 transition-colors duration-300 hover:scale-105"
             />
           </button>
@@ -47,7 +47,7 @@
     >
       <img
         src={preview}
-        alt="Full preview"
+        alt="nicolas manurung"
         class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg"
       />
     </div>

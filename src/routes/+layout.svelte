@@ -9,8 +9,11 @@
 <svelte:head>
 	<link rel="icon" href={favicon} />
 	<meta name="keywords" content={keywords} />
-	<meta name="description" content={keywords} />
-	<meta name="google-site-verification" content={keywords} />
+	<title>Nicolas Manurung — Software Engineer</title>
+	<meta
+		name="description"
+		content="Portfolio Nicolas Raja Oloan Manurung, Software Engineer"
+	/>
 	<!-- <style>
 		* {
 			outline: 1px dashed rgba(0, 0, 0, 0.25);
