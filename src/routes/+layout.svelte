@@ -9,6 +9,7 @@
 <svelte:head>
 	<link rel="icon" href={favicon} />
 	<meta name="keywords" content={keywords} />
+	<meta name="google-site-verification" content={keywords} />
 	<!-- <style>
 		* {
 			outline: 1px dashed rgba(0, 0, 0, 0.25);
