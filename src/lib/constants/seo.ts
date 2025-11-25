@@ -1,0 +1,1 @@
+export const keywords = "nico, nicolas, raja, oloan, manurung, nicolas raja, nicolas manurung, manurung"
